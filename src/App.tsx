@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.scss';
-import Header from './Header';
+import CountDisplay from './count-display/CountDisplay';
+import Counter from './counter/Counter';
+import Header from './header/Header';
 
 function App() {
   return (
     <div className="App">
-      <Header/>
+      <Header title="Target" />
+      <CountDisplay count="234" />
+      <Counter />
   
     </div>
   );
