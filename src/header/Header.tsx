@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header({ title }) {
+export default function Header({ title }) {
   return (
     <header
       className="has-background-warning-dark p-1
@@ -20,4 +20,3 @@ function Header({ title }) {
   );
 }
 
-export default Header;

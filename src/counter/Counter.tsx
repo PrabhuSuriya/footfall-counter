@@ -1,6 +1,6 @@
 import "./Counter.scss";
 
-function Counter() {
+export default function Counter() {
   return (
     <div className="buttons is-flex is-justify-content-space-around">
       <button className="button is-danger">-</button>
@@ -8,5 +8,3 @@ function Counter() {
     </div>
   );
 }
-
-export default Counter;
