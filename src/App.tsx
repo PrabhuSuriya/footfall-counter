@@ -1,17 +1,15 @@
-import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import "./App.scss";
-import CountDisplay from "./components/count-display/CountDisplay";
-import CountGraph from "./components/count-graph/CountGraph";
-import CountInfo from "./components/count-info/CountInfo";
-import Counter from "./components/counter/Counter";
 import Header from "./components/header/Header";
 import Home from "./pages/home/Home";
+import { AppState } from "./store/AppStore";
 
 function App() {
+  const title = useSelector((state: AppState) => state.title);
   
   return (
     <section className="m-0">
-      <Header title="Walmart" />
+      <Header title={title} />
       <Home />
     </section>
   );
