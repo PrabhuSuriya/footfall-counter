@@ -1,0 +1,35 @@
+section {
+  margin: 0 1rem;
+  .marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    // background-color: black;
+    
+    width: 2rem;
+    bottom: 3px;
+    font-size: 2rem;
+    transform: translateX(-50%);
+    .capacity {
+      font-size: .75rem;
+    }
+  }
+  .graph-wrapper {
+    display: flex;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    height: 2rem;
+    overflow: hidden;
+    .graph {
+      height: 100%;
+      // width: 25%;
+      // border-radius: 0.5rem 0 0 0.5rem;
+      background-color: red;
+    }
+  }
+  .capacity-info {
+    font-size: 1.5rem;
+    text-align: right;
+  }
+}

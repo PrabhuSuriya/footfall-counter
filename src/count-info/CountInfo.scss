@@ -1,0 +1,27 @@
+section {
+  .count-display {
+    display: flex;
+    font-size: 4rem;
+    justify-content: center;
+    border: 2px solid #614d00;
+    margin: 0 3rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+
+    &.good {
+      background-color: #8ef329;
+    }
+    &.warning {
+      background-color: #f09246;
+    }
+    &.alert {
+      background-color: #e00e0e;
+      color: white;
+    }
+  }
+  .total-info {
+    margin: 0 3rem;
+    text-align: right;
+    font-size: 1.2rem;
+  }
+}
