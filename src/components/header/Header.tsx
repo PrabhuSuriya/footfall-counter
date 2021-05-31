@@ -7,16 +7,19 @@ export default function Header({ title }) {
       is-flex is-flex-direction-row is-justify-content-space-between"
     >
       <div>
-        <img src="logo192.png" className="image is-32x32" />
+        <a href="/home">
+          <img src="logo192.png" className="image is-32x32" />
+        </a>
       </div>
 
       <h2 className="is-flex-grow-1 title has-text-centered has-text-primary-light mb-0">
         {title}
       </h2>
       <div className="is-flex is-align-items-center p-1">
-        <i className="fas fa-cog has-text-white is-size-4"></i>
+        <a href="/settings">
+          <i className="fas fa-cog has-text-white is-size-4"></i>
+        </a>
       </div>
     </header>
   );
 }
-

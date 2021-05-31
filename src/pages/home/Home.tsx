@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CountDisplay from "../../components/count-display/CountDisplay";
 import CountGraph from "../../components/count-graph/CountGraph";
