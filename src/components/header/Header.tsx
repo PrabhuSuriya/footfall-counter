@@ -1,5 +1,4 @@
-import React from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Header({ title }) {
   return (
@@ -9,7 +8,7 @@ export default function Header({ title }) {
     >
       <div>
         <Link to="/home">
-          <img src="logo192.png" className="image is-32x32" />
+          <img src="logo192.png" className="image is-32x32" alt="icon" />
         </Link>
       </div>
 

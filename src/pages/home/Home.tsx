@@ -3,7 +3,7 @@ import CountDisplay from "../../components/count-display/CountDisplay";
 import CountGraph from "../../components/count-graph/CountGraph";
 import CountInfo from "../../components/count-info/CountInfo";
 import Counter from "../../components/counter/Counter";
-import { decrement, DECREMENT, increment, INCREMENT } from "../../store/AppActions";
+import { decrement, increment } from "../../store/AppActions";
 import { AppState } from "../../store/AppStore";
 import "./Home.scss";
 

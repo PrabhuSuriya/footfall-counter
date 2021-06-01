@@ -6,7 +6,6 @@ import { AppState } from "./store/AppStore";
 import {
   BrowserRouter as Router,
   Route,
-  Redirect,
   Switch,
 } from "react-router-dom";
 import Settings from "./pages/settings/Settings";
