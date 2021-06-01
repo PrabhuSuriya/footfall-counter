@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT, UPDATE_TITLE } from "./AppActions";
+import { INCREMENT, DECREMENT, UPDATE_TITLE, UPDATE_TOTALCOUNT, UPDATE_ALLOWED_CAPACITY } from "./AppActions";
 
 export interface AppState {
     title: string;
@@ -23,6 +23,10 @@ export const appReducer = (state: AppState = initialState, action) => {
             return { ...state, count: Math.max(0, --state.count) };
         case UPDATE_TITLE:
             return { ...state, title: action.payload };
+        case UPDATE_TOTALCOUNT:
+            return { ...state, totalCount: action.payload };
+        case UPDATE_ALLOWED_CAPACITY:
+            return { ...state, allowedCapacity: action.payload };
         default:
             return state;
     }

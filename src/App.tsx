@@ -25,9 +25,9 @@ function App() {
           <Route exact path="/settings">
             <Settings />
           </Route>
-          {/* <Route exact path="/">
+          <Route path="/">
             <Home />
-          </Route> */}
+          </Route>
         </Switch>
       </Router>
     </section>

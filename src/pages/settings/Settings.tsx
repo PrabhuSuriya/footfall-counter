@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { decrement, increment, updateTitle } from "../../store/AppActions";
+import {
+  decrement,
+  increment,
+  updateAllowedCapacity,
+  updateTitle,
+  updateTotalcount,
+} from "../../store/AppActions";
 import { AppState } from "../../store/AppStore";
 import "./Settings.scss";
 
@@ -20,8 +26,9 @@ function Settings() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(_title, _totalCount, _allowedCapacity);
     dispatch(updateTitle(_title));
+    dispatch(updateTotalcount(_totalCount));
+    dispatch(updateAllowedCapacity(_allowedCapacity));
   };
 
   return (
@@ -66,6 +73,7 @@ function Settings() {
             defaultValue={_allowedCapacity * 100}
             onChange={(e) => setAllowedCapacity(+e.target.value / 100)}
           />
+          <div className="has-text-right">{_allowedCapacity * 100}%</div>
         </fieldset>
         <fieldset className="is-flex is-justify-content-flex-end is-fixed">
           <button className="button is-success mt-5" type="submit">

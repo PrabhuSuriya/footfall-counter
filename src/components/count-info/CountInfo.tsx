@@ -5,7 +5,7 @@ export default function CountDisplay({ count, totalCount, allowedCapacity }) {
   return (
     <section>
       <div className="total-info">
-        <span className="count">{allowed || 'No'}</span> more people allowed.
+        <span className="count">{Math.floor(allowed) || 'No'}</span> more people allowed.
       </div>
     </section>
   );
