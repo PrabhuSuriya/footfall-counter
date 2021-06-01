@@ -3,7 +3,7 @@ import CountDisplay from "../../components/count-display/CountDisplay";
 import CountGraph from "../../components/count-graph/CountGraph";
 import CountInfo from "../../components/count-info/CountInfo";
 import Counter from "../../components/counter/Counter";
-import { DECREMENT, INCREMENT } from "../../store/AppActions";
+import { decrement, DECREMENT, increment, INCREMENT } from "../../store/AppActions";
 import { AppState } from "../../store/AppStore";
 import "./Home.scss";
 
@@ -17,8 +17,8 @@ function Home() {
   );
   const dispatch = useDispatch();
 
-  const onIncreaseCount = (e) => dispatch({ type: INCREMENT });
-  const onDecreaseCount = (e) => dispatch({ type: DECREMENT });
+  const onIncreaseCount = (e) => dispatch(increment());
+  const onDecreaseCount = (e) => dispatch(decrement());
 
   return (
     <section className="home pt-2">

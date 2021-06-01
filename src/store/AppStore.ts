@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from "./AppActions";
+import { INCREMENT, DECREMENT, UPDATE_TITLE } from "./AppActions";
 
 export interface AppState {
     title: string;
@@ -8,7 +8,7 @@ export interface AppState {
 }
 
 const initialState: AppState = {
-    title: 'Best Buy',
+    title: 'Counter',
     count: 10,
     allowedCapacity: .75,
     totalCount: 28
@@ -21,6 +21,8 @@ export const appReducer = (state: AppState = initialState, action) => {
             return { ...state, count: ++state.count };
         case DECREMENT:
             return { ...state, count: Math.max(0, --state.count) };
+        case UPDATE_TITLE:
+            return { ...state, title: action.payload };
         default:
             return state;
     }
