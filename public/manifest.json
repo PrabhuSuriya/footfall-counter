@@ -1,6 +1,7 @@
 {
-  "short_name": "Footfall Counter",
-  "name": "Ensure social distancing",
+  "short_name": "Counter",
+  "name": "Footfall Counter",
+  "description": "Footfal Counter - ensure social distancing by keeping track of people in closed spaces.",
   "icons": [
     {
       "src": "favicon.ico",
