@@ -30,7 +30,7 @@ function Settings() {
   };
 
   return (
-    <section className="home pt-2 mx-4">
+    <section className="settings pt-2 mx-4">
       <form onSubmit={onSubmit} className="is-flex is-flex-direction-column">
         <fieldset>
           <label htmlFor="name" className="is-size-4">
@@ -71,7 +71,7 @@ function Settings() {
             defaultValue={_allowedCapacity * 100}
             onChange={(e) => setAllowedCapacity(+e.target.value / 100)}
           />
-          <div className="has-text-right">{_allowedCapacity * 100}%</div>
+          <div className="has-text-right">{(_allowedCapacity * 100).toFixed(2)}%</div>
         </fieldset>
         <fieldset className="is-flex is-justify-content-flex-end is-fixed">
           <button className="button is-success mt-5" type="submit">

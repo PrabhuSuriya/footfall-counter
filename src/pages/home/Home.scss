@@ -3,4 +3,6 @@
     flex-direction: column;
     gap: 1rem;
     margin: 0;
+    width: clamp(300px, 60vw, 960px);
+    margin: 0 auto;
 }
