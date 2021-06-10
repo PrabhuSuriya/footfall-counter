@@ -1,11 +1,11 @@
 import "./CountDisplay.scss";
 
-export default function CountDisplay({ count, totalCount, allowedCapacity }) {
+export default function CountDisplay({ count, totalCount, allowedCapacity, warningCapacity }) {
   const getLevel = () => {
     const currentCapacity = count / totalCount;
     if (currentCapacity >= allowedCapacity) {
       return "alert";
-    } else if (currentCapacity / allowedCapacity >= 0.8) {
+    } else if (currentCapacity >= warningCapacity) {
       return "warning";
     } else {
       return "good";

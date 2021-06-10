@@ -8,11 +8,12 @@ import { AppState } from "../../store/AppStore";
 import "./Home.scss";
 
 function Home() {
-  const { count, totalCount, allowedCapacity } = useSelector(
+  const { count, totalCount, allowedCapacity, warningCapacity } = useSelector(
     (state: AppState) => ({
       count: state.count,
       totalCount: state.totalCount,
-      allowedCapacity: state.allowedCapacity
+      allowedCapacity: state.allowedCapacity,
+      warningCapacity: state.warningCapacity
     })
   );
   const dispatch = useDispatch();
@@ -31,6 +32,7 @@ function Home() {
         count={count}
         totalCount={totalCount}
         allowedCapacity={allowedCapacity}
+        warningCapacity={warningCapacity}
       />
       <Counter
         increaseCount={onIncreaseCount}
